@@ -9,7 +9,7 @@ const TextArea = ({ label, name, value, handleChange, rows = 4 }) => {
         value={value}
         placeholder={label}
         onChange={handleChange}
-        className="text-input p-3 resize-none w-full outline-none text-base placeholder:text-[#808080]"
+        className="text-input p-3 resize-none w-full outline-none text-sm placeholder:text-[#808080]"
       />
     </div>
   )

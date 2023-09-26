@@ -8,7 +8,7 @@ const TextInput = ({ label, name, value, handleChange }) => {
         value={value}
         placeholder={label}
         onChange={handleChange}
-        className="text-input p-3 w-full outline-none text-base placeholder:text-[#808080]"
+        className="text-input p-3 w-full outline-none text-sm placeholder:text-[#808080]"
       />
     </div>
   )

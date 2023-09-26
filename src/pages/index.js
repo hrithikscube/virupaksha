@@ -1,8 +1,9 @@
 import Cta from '@/components/Cta'
 import Header from '@/components/Header'
+import Marquee from 'react-fast-marquee'
+import React, { Fragment, useState } from 'react'
 import TextArea from '@/components/input/TextArea'
 import TextInput from '@/components/input/TextInput'
-import React, { Fragment, useState } from 'react'
 
 const addressInfo = [
   {
@@ -24,7 +25,7 @@ const UnitsTabs = () => {
 
   return (
     <Fragment>
-      <div className='my-5'> 
+      <div className="my-5">
         <div className="flex items-center border-b border-primaryBlue lg:w-[564px] w-full">
           {React.Children.toArray(
             ['Unit 1', 'Unit 2', 'Unit 3'].map((item) => (
@@ -53,6 +54,63 @@ const UnitsTabs = () => {
         )}
       </div>
     </Fragment>
+  )
+}
+
+const certInfo = [
+  {
+    name: 'fda',
+    icon: '/icons/certifications/fda.svg',
+  },
+  {
+    name: 'edom',
+    icon: '/icons/certifications/edom.svg',
+  },
+  {
+    name: 'cofepris',
+    icon: '/icons/certifications/cofepris.svg',
+  },
+  {
+    name: 'iso1',
+    icon: '/icons/certifications/iso1.svg',
+  },
+  {
+    name: 'iso2',
+    icon: '/icons/certifications/iso2.svg',
+  },
+  {
+    name: 'iso3',
+    icon: '/icons/certifications/iso3.svg',
+  },
+  {
+    name: 'iso4',
+    icon: '/icons/certifications/iso4.svg',
+  },
+  {
+    name: 'iso5',
+    icon: '/icons/certifications/iso5.svg',
+  },
+]
+
+const Certifications = () => {
+  return (
+    <div>
+      <p className="lg:text-xl text-lg font-semibold text-primaryBlue">
+        Certifications
+      </p>
+
+      <div className="my-5">
+        <Marquee>
+          {React.Children.toArray(
+            certInfo.map((item) => (
+              <div className='mx-5'>
+                <img src={item.icon} alt={item.icon} />
+              </div>
+            )),
+          )}
+        </Marquee>
+      </div>
+    </div>
   )
 }
 
@@ -212,9 +270,7 @@ const index = () => {
 
             <UnitsTabs />
 
-            <p className="lg:text-xl text-lg font-semibold text-primaryBlue">
-              Certifications
-            </p>
+            <Certifications />
           </div>
 
           {/* Contact Form */}
@@ -232,9 +288,7 @@ const index = () => {
                 <TextInput label="Email ID*" />
                 <TextInput label="Contact Number*" />
                 <TextArea label="Write a message*" />
-                <Cta variant="contained">
-                  Submit
-                </Cta>
+                <Cta variant="contained">Submit</Cta>
               </div>
             </div>
           </div>
