@@ -31,11 +31,37 @@
   box-shadow: 0px 4px 12px 0px rgba(0, 0, 0, 0.15);
 }
 
+.contained-btn {
+  border-radius: 12px;
+  border: 1px solid #1c3f67;
+  background: rgba(255, 255, 255, 0.24);
+  box-shadow: 0px 4px 15px 0px rgba(0, 0, 0, 0.15);
+}
+
 .who-we-are {
-  background-image:
-  linear-gradient(88deg, #C0FFD8 4.63%, rgba(192, 255, 216, 0.00) 48.33%),
-  url('../../public/images/who-we-are.png');
+  background-image: linear-gradient(
+      88deg,
+      #c0ffd8 4.63%,
+      rgba(192, 255, 216, 0) 48.33%
+    ),
+    url('../../public/images/who-we-are.png');
   @apply lg:w-1/2 w-full lg:h-[602px] h-[390px];
-  
+
   background-size: cover;
+}
+
+.why-choose-us {
+  border-radius: 12px;
+  background: linear-gradient(
+    163deg,
+    #333186 1.59%,
+    #232e69 40.58%,
+    #0e3662 96.36%
+  );
+}
+
+.text-input {
+  border-radius: 6px;
+  border: 1px solid rgba(61, 87, 126, 0.45);
+  background: rgba(255, 255, 255, 0.38);
 }

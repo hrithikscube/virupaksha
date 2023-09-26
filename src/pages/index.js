@@ -1,6 +1,60 @@
 import Cta from '@/components/Cta'
 import Header from '@/components/Header'
-import React, { Fragment } from 'react'
+import TextArea from '@/components/input/TextArea'
+import TextInput from '@/components/input/TextInput'
+import React, { Fragment, useState } from 'react'
+
+const addressInfo = [
+  {
+    title: 'Sy.No.10, Gaddapotharam Village, Jinnaram Mandal, Sangareddy Dist.',
+    icon: '/icons/addressPin.svg',
+  },
+  {
+    title: 'Year of Commencement: 2003 Area: Ac.6.15',
+    icon: '/icons/building.svg',
+  },
+  {
+    title: 'Current Capacity: 400 KL',
+    icon: '/icons/capacity.svg',
+  },
+]
+
+const UnitsTabs = () => {
+  const [active, setActive] = useState('Unit 1')
+
+  return (
+    <Fragment>
+      <div className='my-5'> 
+        <div className="flex items-center border-b border-primaryBlue lg:w-[564px] w-[336px]">
+          {React.Children.toArray(
+            ['Unit 1', 'Unit 2', 'Unit 3'].map((item) => (
+              <button
+                onClick={() => setActive(item)}
+                className={`${
+                  active === item
+                    ? 'bg-primaryBlue text-white'
+                    : 'bg-none text-primaryBlue opacity-[0.5]'
+                } text-sm lg:w-[188px] w-[112px] h-[46px] flex items-center justify-center`}
+              >
+                {item}
+              </button>
+            )),
+          )}
+        </div>
+      </div>
+      <div className="lg:w-[350px]">
+        {React.Children.toArray(
+          addressInfo.map(({ icon, title }) => (
+            <div className="flex items-center gap-4">
+              <img src={icon} />
+              <p className="text-primaryBlue text-base font-thin">{title}</p>
+            </div>
+          )),
+        )}
+      </div>
+    </Fragment>
+  )
+}
 
 const statsInfo = [
   {
@@ -98,11 +152,12 @@ const index = () => {
             </div>
           </div>
         </div>
+
         {/* Who we are */}
         <div className="w-full bg-paleGreen">
           <div className="flex lg:flex-row flex-col-reverse items-start w-full">
-            <div className="lg:w-1/2 flex flex-col gap-2 lg:p-20 p-5">
-              <p className="text-base uppercase font-medium text-primaryBlue">
+            <div className="lg:w-1/2 m-auto flex flex-col gap-2 lg:p-20 p-5 items-start justify-start">
+              <p className="text-base uppercase font-semibold text-primaryBlue">
                 who are we
               </p>
               <p className="lg:text-xl text-lg font-semibold text-primaryBlue">
@@ -114,7 +169,7 @@ const index = () => {
                 <br /> Partnership.
               </p>
 
-              <div className="grid grid-cols-2">
+              <div className="grid grid-cols-2 gap-5">
                 {React.Children.toArray(
                   statsInfo.map((item) => (
                     <div className="flex items-center gap-2">
@@ -129,10 +184,51 @@ const index = () => {
                   )),
                 )}
               </div>
+
+              <div className="relative lg:left-[100px]">
+                <Cta variant="contained">Know More</Cta>
+              </div>
             </div>
 
-            <div className='who-we-are'> 
-              {/* <img src="/images/who-we-are.png" alt="who-we-are" /> */}
+            <div className="who-we-are"></div>
+          </div>
+        </div>
+
+        {/* Why choose us */}
+        <div className="w-full bg-white lg:p-20 p-5">
+          <div className="why-choose-us w-full h-[574px]" />
+        </div>
+
+        {/* Unit Details */}
+        <div className="flex lg:flex-row flex-col items-start w-full h-[646px]">
+          {/* Tabs & Info */}
+          <div className="lg:w-[55%] w-full lg:p-20 p-10 bg-paleGreen h-full">
+            <p className="text-base uppercase font-semibold text-primaryBlue">
+              Unit details
+            </p>
+            <p className="lg:text-xl text-lg font-semibold text-primaryBlue">
+              Hubs of Quality Production
+            </p>
+
+            <UnitsTabs />
+          </div>
+
+          {/* Contact Form */}
+          <div className="lg:w-[45%] w-full lg:p-20 p-10 bg-grayLight h-full flex flex-col items-center justify-center">
+            <div className="flex flex-col items-center justify-center gap-2 lg:w-[417px]">
+              <h2 className="text-primaryBlue lg:text-2xl text-lg font-semibold">
+                For Enquiry - Please Contact Us
+              </h2>
+              <p className="text-base lg:text-lg text-gray-500 font-thin">
+                Get in touch by writing to us
+              </p>
+
+              <div className="flex flex-col gap-4 w-full">
+                <TextInput label="Your Name*" />
+                <TextInput label="Email ID*" />
+                <TextInput label="Contact Number*" />
+                <TextArea label="Write a message*" />
+              </div>
             </div>
           </div>
         </div>

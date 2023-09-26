@@ -15,7 +15,8 @@ module.exports = {
       colors: {
         primaryBlue: '#1C3F67',
         vomitGreen: '#4EE287',
-        paleGreen:'#C0FFD8'
+        paleGreen:'#C0FFD8',
+        grayLight:'#EBEBEB'
       },
     },
   },
