@@ -211,6 +211,10 @@ const index = () => {
             </p>
 
             <UnitsTabs />
+
+            <p className="lg:text-xl text-lg font-semibold text-primaryBlue">
+              Certifications
+            </p>
           </div>
 
           {/* Contact Form */}
