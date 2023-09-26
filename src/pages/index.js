@@ -160,11 +160,15 @@ const index = () => {
             </p>
           </div>
 
-          <div className="grid lg:grid-cols-3 absolute bottom-0 w-full">
-            <div className="bg-[#333186] p-7 lg:h-[289px] hidden lg:flex flex-col items-start justify-center">
+          <div className="grid lg:grid-cols-3 md:grid-cols-3 absolute bottom-0 w-full">
+            <div className="bg-[#333186] p-7 lg:h-[289px] hidden lg:flex md:flex flex-col items-start justify-center">
               <div className="flex items-start gap-5">
-                <img src="/shapes/chemistry1.svg" alt="shape1" />
-                <div className="lg:flex hidden flex-col gap-2 items-start justify-center">
+                <img
+                  src="/shapes/chemistry1.svg"
+                  alt="shape1"
+                  className="lg:w-full lg:h-full w-10 h-10"
+                />
+                <div className="lg:flex flex-col gap-2 items-start justify-center">
                   <p className="text-vomitGreen uppercase text-sm font-medium">
                     Active Pharmaceutical Ingredients
                   </p>
@@ -178,10 +182,14 @@ const index = () => {
               </div>
             </div>
 
-            <div className="bg-[#232E69] p-7 lg:h-[289px] hidden lg:flex flex-col items-start justify-center">
+            <div className="bg-[#232E69] p-7 lg:h-[289px] hidden lg:flex md:flex flex-col items-start justify-center">
               <div className="flex items-start gap-5">
-                <img src="/shapes/chemistry2.svg" alt="shape2" />
-                <div className="lg:flex hidden flex-col gap-2 items-start justify-center">
+                <img
+                  src="/shapes/chemistry2.svg"
+                  alt="shape2"
+                  className="lg:w-full lg:h-full w-10 h-10"
+                />
+                <div className="lg:flex flex-col gap-2 items-start justify-center">
                   <p className="text-vomitGreen uppercase text-sm font-medium">
                     Intermediates
                   </p>
@@ -214,7 +222,7 @@ const index = () => {
 
         {/* Who we are */}
         <div className="w-full bg-paleGreen">
-          <div className="flex lg:flex-row flex-col-reverse items-start w-full">
+          <div className="flex lg:flex-row md:flex-row flex-col-reverse items-start w-full">
             <div className="lg:w-1/2 m-auto flex flex-col gap-2 lg:p-20 p-5 items-start justify-start">
               <p className="text-base uppercase font-semibold text-primaryBlue">
                 who are we
@@ -228,7 +236,7 @@ const index = () => {
                 <br /> Partnership.
               </p>
 
-              <div className="grid grid-cols-2 gap-5">
+              <div className="grid grid-cols-2 lg:gap-5 gap-4">
                 {React.Children.toArray(
                   statsInfo.map((item) => (
                     <div className="flex items-center gap-2">
