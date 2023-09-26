@@ -275,8 +275,8 @@ const index = () => {
           </div>
 
           {/* Contact Form */}
-          <div className="lg:w-[45%] w-full lg:p-20 p-10 bg-grayLight h-full flex flex-col items-center justify-center">
-            <div className="flex flex-col items-center justify-center gap-2 lg:w-[417px]">
+          <div className="lg:w-[45%] w-full lg:p-20 p-5 bg-grayLight h-full flex flex-col items-center justify-center">
+            <div className="flex flex-col items-center justify-center gap-2 lg:w-[417px] w-full">
               <h2 className="text-primaryBlue lg:text-2xl text-lg font-semibold">
                 For Enquiry - Please Contact Us
               </h2>
