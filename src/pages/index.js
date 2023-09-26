@@ -166,7 +166,7 @@ const index = () => {
                 <img
                   src="/shapes/chemistry1.svg"
                   alt="shape1"
-                  className="lg:w-full lg:h-full w-10 h-10"
+                  className="lg:w-20 lg:h-20 w-10 h-10"
                 />
                 <div className="lg:flex flex-col gap-2 items-start justify-center">
                   <p className="text-vomitGreen uppercase text-sm font-medium">
@@ -187,7 +187,7 @@ const index = () => {
                 <img
                   src="/shapes/chemistry2.svg"
                   alt="shape2"
-                  className="lg:w-full lg:h-full w-10 h-10"
+                  className="lg:w-20 lg:h-20 w-10 h-10"
                 />
                 <div className="lg:flex flex-col gap-2 items-start justify-center">
                   <p className="text-vomitGreen uppercase text-sm font-medium">
