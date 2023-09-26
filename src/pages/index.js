@@ -4,6 +4,7 @@ import Marquee from 'react-fast-marquee'
 import React, { Fragment, useState } from 'react'
 import TextArea from '@/components/input/TextArea'
 import TextInput from '@/components/input/TextInput'
+import Footer from '@/components/Footer'
 
 const addressInfo = [
   {
@@ -103,7 +104,7 @@ const Certifications = () => {
         <Marquee>
           {React.Children.toArray(
             certInfo.map((item) => (
-              <div className='mx-5'>
+              <div className="mx-5">
                 <img src={item.icon} alt={item.icon} />
               </div>
             )),
@@ -258,7 +259,7 @@ const index = () => {
         </div>
 
         {/* Unit Details */}
-        <div className="flex lg:flex-row flex-col items-start w-full h-[646px]">
+        <div className="flex lg:flex-row flex-col items-start w-full lg:h-[646px]">
           {/* Tabs & Info */}
           <div className="lg:w-[55%] w-full lg:p-20 p-5 bg-paleGreen h-full">
             <p className="text-base uppercase font-semibold text-primaryBlue">
@@ -294,6 +295,8 @@ const index = () => {
           </div>
         </div>
       </div>
+      {/* Footer */}
+      <Footer />
     </Fragment>
   )
 }
