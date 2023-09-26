@@ -44,7 +44,7 @@
       #c0ffd8 4.63%,
       rgba(192, 255, 216, 0) 48.33%
     ),
-    url('../../public/images/who-we-are.png');
+    url('../../public/images/who-we-are.webp');
   @apply lg:w-1/2 w-full lg:h-[602px] h-[390px];
 
   background-size: cover;

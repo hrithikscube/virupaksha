@@ -146,7 +146,7 @@ const index = () => {
         {/* Hero section */}
         <div className="w-full h-screen flex flex-col relative">
           <img
-            src="/images/heroBg.png"
+            src="/images/heroBg.webp"
             alt="hero background"
             className="z-5 object-cover h-full"
           />
