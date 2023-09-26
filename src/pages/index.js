@@ -42,7 +42,7 @@ const UnitsTabs = () => {
           )}
         </div>
       </div>
-      <div className="lg:w-[350px]">
+      <div className="lg:w-[350px] mb-5">
         {React.Children.toArray(
           addressInfo.map(({ icon, title }) => (
             <div className="flex items-center gap-4">
@@ -175,8 +175,8 @@ const index = () => {
                     <div className="flex items-center gap-2">
                       <img src={item.icon} alt={item.icon} />
                       <div>
-                        <p className="text-xs text-gray-400">{item.title}</p>
-                        <p className="text-base font-semibold text-primaryBlue">
+                        <p className="text-sm text-gray-400">{item.title}</p>
+                        <p className="text-lg font-semibold text-primaryBlue">
                           {item.description}
                         </p>
                       </div>
@@ -186,7 +186,7 @@ const index = () => {
               </div>
 
               <div className="relative lg:left-[100px]">
-                <Cta variant="contained">Know More</Cta>
+                <Cta variant="outlined">Know More</Cta>
               </div>
             </div>
 
@@ -232,6 +232,9 @@ const index = () => {
                 <TextInput label="Email ID*" />
                 <TextInput label="Contact Number*" />
                 <TextArea label="Write a message*" />
+                <Cta variant="contained">
+                  Submit
+                </Cta>
               </div>
             </div>
           </div>
