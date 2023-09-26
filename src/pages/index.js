@@ -25,7 +25,7 @@ const UnitsTabs = () => {
   return (
     <Fragment>
       <div className='my-5'> 
-        <div className="flex items-center border-b border-primaryBlue lg:w-[564px] w-[336px]">
+        <div className="flex items-center border-b border-primaryBlue lg:w-[564px] w-full">
           {React.Children.toArray(
             ['Unit 1', 'Unit 2', 'Unit 3'].map((item) => (
               <button
@@ -202,7 +202,7 @@ const index = () => {
         {/* Unit Details */}
         <div className="flex lg:flex-row flex-col items-start w-full h-[646px]">
           {/* Tabs & Info */}
-          <div className="lg:w-[55%] w-full lg:p-20 p-10 bg-paleGreen h-full">
+          <div className="lg:w-[55%] w-full lg:p-20 p-5 bg-paleGreen h-full">
             <p className="text-base uppercase font-semibold text-primaryBlue">
               Unit details
             </p>
