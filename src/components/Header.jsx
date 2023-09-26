@@ -20,14 +20,14 @@ const Header = () => {
   ]
 
   return (
-    <div className="w-full lg:p-10 p-5 fixed z-40">
+    <div className="w-full lg:p-6 p-5 fixed z-40">
       <div className="flex items-center justify-between lg:p-5 p-4 m-auto header-background lg:px-7">
         <img src="/icons/logo.svg" alt="virupaksha" className='' />
 
         <div className="lg:flex hidden items-center gap-10">
           {React.Children.toArray(
             menuItems.map((item) => (
-              <p className="text-base text-white">{item.name}</p>
+              <p className="text-base text-white hover:text-vomitGreen cursor-pointer">{item.name}</p>
             )),
           )}
         </div>
