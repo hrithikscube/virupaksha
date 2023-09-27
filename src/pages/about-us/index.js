@@ -126,7 +126,7 @@ const AboutUs = () => {
             Unleashing the <br /> Power of Expertise
           </p>
 
-          <div className="grid lg:grid-cols-4 gap-4">
+          <div className="grid lg:grid-cols-4 gap-4 w-full">
             {React.Children.toArray(
               cards.map((item) => (
                 <div className="choose-card rounded-lg p-5 flex h-[170px] flex-col items-center justify-center gap-3">
