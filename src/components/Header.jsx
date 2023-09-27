@@ -1,4 +1,3 @@
-import { ClickAwayListener } from '@mui/material'
 import Link from 'next/link'
 import React, { useState } from 'react'
 
@@ -27,7 +26,7 @@ const Header = () => {
   ]
 
   const [showMenu, setShowMenu] = useState(false)
-
+  console.log('showMenu', showMenu)
   return (
     <div className="w-full lg:p-6 p-5 fixed z-40">
       <div className="flex items-center justify-between lg:p-5 p-4 m-auto header-background lg:px-7">
@@ -56,7 +55,6 @@ const Header = () => {
       </div>
 
       {showMenu && (
-        <ClickAwayListener onClickAway={() => setShowMenu(false)}>
           <div className="w-full relative -top-3 z-20">
             <div className="bg-primaryBlue rounded-bl-xl rounded-br-xl w-full p-5">
               <div className="flex flex-col gap-4">
@@ -72,7 +70,6 @@ const Header = () => {
               </div>
             </div>
           </div>
-        </ClickAwayListener>
       )}
     </div>
   )
