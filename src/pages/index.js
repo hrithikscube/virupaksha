@@ -6,6 +6,15 @@ import TextArea from '@/components/input/TextArea'
 import TextInput from '@/components/input/TextInput'
 import Footer from '@/components/Footer'
 
+const SectionTitle = ({ title, style }) => {
+  return (
+    <p className={`text-base uppercase font-semibold ${style ?? 'text-primaryBlue'}`}>
+      {title}
+    </p>
+  )
+}
+
+
 const addressInfo = [
   {
     title: 'Sy.No.10, Gaddapotharam Village, Jinnaram Mandal, Sangareddy Dist.',
@@ -32,11 +41,10 @@ const UnitsTabs = () => {
             ['Unit 1', 'Unit 2', 'Unit 3'].map((item) => (
               <button
                 onClick={() => setActive(item)}
-                className={`${
-                  active === item
-                    ? 'bg-primaryBlue text-white'
-                    : 'bg-none text-primaryBlue opacity-[0.5]'
-                } text-sm lg:w-[188px] w-[112px] h-[46px] flex items-center justify-center`}
+                className={`${active === item
+                  ? 'bg-primaryBlue text-white'
+                  : 'bg-none text-primaryBlue opacity-[0.5]'
+                  } text-sm lg:w-[188px] w-[112px] h-[46px] flex items-center justify-center`}
               >
                 {item}
               </button>
@@ -263,7 +271,19 @@ const index = () => {
 
         {/* Why choose us */}
         <div className="w-full bg-white lg:p-20 p-5">
-          <div className="why-choose-us w-full h-[574px]" />
+          <div className="why-choose-us w-full h-[574px] grid lg:grid-cols-2">
+
+            <div className='w-full p-5'>
+              <div className='w-full rounded-lg bg-[#f2f2f2] h-full'>
+              </div>
+            </div>
+
+            <div className="lg:p-10 p-5">
+              <SectionTitle title="Why Choose us" style="text-[#4EE287]" />
+              <h2 className="lg:text-xl text-lg font-semibold text-white">Delivering Excellence in <br /> Pharmaceutical Manufacturing</h2>
+              <p className="text-white text-base">Trust us for pharma excellence: quality, expertise, customer-<br />centricity.</p>
+            </div>
+          </div>
         </div>
 
         {/* Unit Details */}
