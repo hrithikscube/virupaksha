@@ -74,3 +74,9 @@
   opacity: 0.54;
   background: #C4C4C4;
 }
+
+.outlined-card{
+  border-radius: 12px;
+border: 1px solid #232E69;
+background: rgba(141, 150, 233, 0.21);
+}
