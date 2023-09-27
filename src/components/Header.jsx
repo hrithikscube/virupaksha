@@ -1,21 +1,27 @@
+import Link from 'next/link'
 import React from 'react'
 
 const Header = () => {
   const menuItems = [
     {
       name: 'HOME',
+      link: '/'
     },
     {
       name: 'ABOUT US',
+      link: '/about-us'
     },
     {
       name: 'PRODUCTS',
+      link: '/'
     },
     {
       name: 'SUSTAINABILITY & ESG',
+      link: '/'
     },
     {
       name: 'CONTACT',
+      link: '/'
     },
   ]
 
@@ -27,7 +33,9 @@ const Header = () => {
         <div className="lg:flex hidden items-center gap-10">
           {React.Children.toArray(
             menuItems.map((item) => (
-              <p className="text-base text-white hover:text-vomitGreen cursor-pointer">{item.name}</p>
+              <Link href={item.link}>
+                <p className="text-base text-white hover:text-vomitGreen cursor-pointer">{item.name}</p>
+              </Link>
             )),
           )}
         </div>
