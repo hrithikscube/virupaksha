@@ -6,7 +6,7 @@ import TextArea from '@/components/input/TextArea'
 import TextInput from '@/components/input/TextInput'
 import Footer from '@/components/Footer'
 
-const SectionTitle = ({ title, style }) => {
+export const SectionTitle = ({ title, style }) => {
   return (
     <p className={`text-base uppercase font-semibold ${style ?? 'text-primaryBlue'}`}>
       {title}
@@ -168,7 +168,9 @@ const statsInfo = [
 const index = () => {
   return (
     <Fragment>
+
       <Header />
+
       <div>
         {/* Hero section */}
         <div className="w-full h-screen flex flex-col relative">
@@ -365,7 +367,7 @@ const index = () => {
           </div>
         </div>
       </div>
-      {/* Footer */}
+
       <Footer />
     </Fragment>
   )

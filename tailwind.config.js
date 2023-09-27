@@ -16,7 +16,8 @@ module.exports = {
         primaryBlue: '#1C3F67',
         vomitGreen: '#4EE287',
         paleGreen:'#C0FFD8',
-        grayLight:'#EBEBEB'
+        grayLight:'#EBEBEB',
+        inkBlue:'#232E69'
       },
     },
   },
