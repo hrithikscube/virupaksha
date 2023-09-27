@@ -8,7 +8,11 @@ import Footer from '@/components/Footer'
 
 export const SectionTitle = ({ title, style }) => {
   return (
-    <p className={`text-base uppercase font-semibold ${style ?? 'text-primaryBlue'}`}>
+    <p
+      className={`text-base uppercase font-semibold ${
+        style ? style : 'text-primaryBlue'
+      }`}
+    >
       {title}
     </p>
   )
@@ -17,22 +21,21 @@ export const SectionTitle = ({ title, style }) => {
 const cards = [
   {
     title: 'Regulatory Approvals',
-    icon: '/icons/cards/settings.svg'
+    icon: '/icons/cards/settings.svg',
   },
   {
     title: 'Safe & Sustainable Operations',
-    icon: '/icons/cards/paw.svg'
+    icon: '/icons/cards/paw.svg',
   },
   {
     title: 'Operational Excellence',
-    icon: '/icons/cards/shield.svg'
+    icon: '/icons/cards/shield.svg',
   },
   {
     title: 'Manufacturing Capability',
-    icon: '/icons/cards/manufacture.svg'
+    icon: '/icons/cards/manufacture.svg',
   },
 ]
-
 
 const addressInfo = [
   {
@@ -60,10 +63,11 @@ const UnitsTabs = () => {
             ['Unit 1', 'Unit 2', 'Unit 3'].map((item) => (
               <button
                 onClick={() => setActive(item)}
-                className={`${active === item
-                  ? 'bg-primaryBlue text-white'
-                  : 'bg-none text-primaryBlue opacity-[0.5]'
-                  } text-sm lg:w-[188px] w-[112px] h-[46px] flex items-center justify-center`}
+                className={`${
+                  active === item
+                    ? 'bg-primaryBlue text-white'
+                    : 'bg-none text-primaryBlue opacity-[0.5]'
+                } text-sm lg:w-[188px] w-[112px] h-[46px] flex items-center justify-center`}
               >
                 {item}
               </button>
@@ -168,7 +172,6 @@ const statsInfo = [
 const index = () => {
   return (
     <Fragment>
-
       <Header />
 
       <div>
@@ -293,39 +296,45 @@ const index = () => {
         {/* Why choose us */}
         <div className="w-full bg-white lg:p-20 p-5">
           <div className="why-choose-us w-full flex lg:flex-row flex-col lg:justify-between justify-center items-center">
-
-            <div className='w-[55%] p-5 lg:block hidden'>
-              <div className='w-full rounded-lg  h-full'>
-              </div>
+            <div className="w-[55%] p-5 lg:block hidden">
+              <div className="w-full rounded-lg  h-full"></div>
             </div>
 
             <div className="lg:p-10 p-5 flex flex-col gap-3 w-full lg:w-[45%]">
               <SectionTitle title="Why Choose us" style="text-[#4EE287]" />
-              <h2 className="lg:text-xl text-lg font-semibold text-white">Delivering Excellence in <br /> Pharmaceutical Manufacturing</h2>
-              <p className="text-white text-base font-thin">Trust us for pharma excellence: quality, expertise, customer-<br />centricity.</p>
+              <h2 className="lg:text-xl text-lg font-semibold text-white">
+                Delivering Excellence in <br /> Pharmaceutical Manufacturing
+              </h2>
+              <p className="text-white text-base font-thin">
+                Trust us for pharma excellence: quality, expertise, customer-
+                <br />
+                centricity.
+              </p>
 
               <div className="choose-card w-full lg:p-10 p-5 rounded-lg lg:flex hidden flex-col items-start justify-center">
-                <p className="text-white font-medium lg:text-xl text-lg">Regulatory Approvals</p>
-                <p className="font-thin text-base text-white">Following the ICH guidelines have become bread and butter for our employees.</p>
+                <p className="text-white font-medium lg:text-xl text-lg">
+                  Regulatory Approvals
+                </p>
+                <p className="font-thin text-base text-white">
+                  Following the ICH guidelines have become bread and butter for
+                  our employees.
+                </p>
               </div>
 
               <div className="lg:hidden flex flex-col items-start justify-start">
                 <div className="grid grid-cols-2 gap-5 mt-5">
-                  {React.Children.toArray(cards.map(item => (
-                    <div className="choose-card p-5 flex items-center gap-4 w-full h-[140px] flex-col justify-center">
-
-                      <img src={item.icon} alt={item.icon} />
-                      <p className="text-center text-white text-xs font-medium">{item.title}</p>
-
-                    </div>
-                  )))}
+                  {React.Children.toArray(
+                    cards.map((item) => (
+                      <div className="choose-card p-5 flex items-center gap-4 w-full h-[140px] flex-col justify-center">
+                        <img src={item.icon} alt={item.icon} />
+                        <p className="text-center text-white text-xs font-medium">
+                          {item.title}
+                        </p>
+                      </div>
+                    )),
+                  )}
                 </div>
               </div>
-
-
-
-
-
             </div>
           </div>
         </div>
