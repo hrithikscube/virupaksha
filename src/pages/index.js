@@ -9,9 +9,8 @@ import Footer from '@/components/Footer'
 export const SectionTitle = ({ title, style }) => {
   return (
     <p
-      className={`text-base uppercase font-semibold ${
-        style ? style : 'text-primaryBlue'
-      }`}
+      className={`text-base uppercase font-semibold ${style ? style : 'text-primaryBlue'
+        }`}
     >
       {title}
     </p>
@@ -63,11 +62,10 @@ const UnitsTabs = () => {
             ['Unit 1', 'Unit 2', 'Unit 3'].map((item) => (
               <button
                 onClick={() => setActive(item)}
-                className={`${
-                  active === item
-                    ? 'bg-primaryBlue text-white'
-                    : 'bg-none text-primaryBlue opacity-[0.5]'
-                } text-sm lg:w-[188px] w-[112px] h-[46px] flex items-center justify-center`}
+                className={`${active === item
+                  ? 'bg-primaryBlue text-white transitions-all opacity-100 duration-500'
+                  : 'bg-none text-primaryBlue opacity-50 transitions-all duration-500'
+                  } text-sm lg:w-[188px] w-[112px] h-[46px] flex items-center justify-center`}
               >
                 {item}
               </button>
