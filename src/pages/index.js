@@ -37,7 +37,7 @@ const cards = [
   },
 ]
 
-const addressInfo = [
+const addressInfo1 = [
   {
     title: 'Sy.No.10, Gaddapotharam Village, Jinnaram Mandal, Sangareddy Dist.',
     icon: '/icons/addressPin.svg',
@@ -52,18 +52,50 @@ const addressInfo = [
   },
 ]
 
+const addressInfo2 = [
+  {
+    title: 'Plot no 30 to 33 IDA Pashamylaram Patancheru, Sangareddy Dist.',
+    icon: '/icons/addressPin.svg',
+  },
+  {
+    title: 'Year of Commencement: 2010 Area: Ac.5.00',
+    icon: '/icons/building.svg',
+  },
+  {
+    title: 'Current Capacity: 300 KL',
+    icon: '/icons/capacity.svg',
+  },
+]
+
+const addressInfo3 = [
+  {
+    title: 'Plot no 100 (P2) & (P3), Gadwanthi vil, Humnabad, Bidar, Karnataka',
+    icon: '/icons/addressPin.svg',
+  },
+  {
+    title: 'Year of Commencement: 2019 Area: Ac.6.15',
+    icon: '/icons/building.svg',
+  },
+  {
+    title: 'Current Capacity: 40 KL',
+    icon: '/icons/capacity.svg',
+  },
+]
+
+const unitAddresses = [addressInfo1, addressInfo2, addressInfo3]
+
 const UnitsTabs = () => {
-  const [active, setActive] = useState('Unit 1')
+  const [active, setActive] = useState(0)
 
   return (
     <Fragment>
       <div className="my-5">
         <div className="flex items-center border-b border-primaryBlue lg:w-[564px] w-full">
           {React.Children.toArray(
-            ['Unit 1', 'Unit 2', 'Unit 3'].map((item) => (
+            ['Unit 1', 'Unit 2', 'Unit 3'].map((item, index) => (
               <button
-                onClick={() => setActive(item)}
-                className={`${active === item
+                onClick={() => setActive(index)}
+                className={`${active === index
                   ? 'bg-primaryBlue text-white transitions-all opacity-100 duration-500'
                   : 'bg-none text-primaryBlue opacity-50 transitions-all duration-500'
                   } text-sm lg:w-[188px] w-[112px] h-[46px] flex items-center justify-center`}
@@ -76,7 +108,7 @@ const UnitsTabs = () => {
       </div>
       <div className="lg:w-[350px] mb-5">
         {React.Children.toArray(
-          addressInfo.map(({ icon, title }) => (
+          unitAddresses[active].map(({ icon, title }) => (
             <div className="flex items-center gap-4">
               <img src={icon} />
               <p className="text-primaryBlue text-base font-thin">{title}</p>
