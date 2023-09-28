@@ -15,9 +15,13 @@ module.exports = {
       colors: {
         primaryBlue: '#1C3F67',
         vomitGreen: '#4EE287',
-        paleGreen:'#C0FFD8',
-        grayLight:'#EBEBEB',
-        inkBlue:'#232E69'
+        paleGreen: '#C0FFD8',
+        grayLight: '#EBEBEB',
+        inkBlue: '#232E69',
+        circleBorder4: 'rgba(254, 188, 19, 0.20)',
+        circleBorder3: 'rgba(254, 188, 19, 0.30)',
+        circleBorder2: 'rgba(254, 188, 19, 0.65)',
+        circleBorder1: 'rgba(254, 188, 19, 0.40)'
       },
     },
   },

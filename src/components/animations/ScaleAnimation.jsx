@@ -51,7 +51,7 @@ const ScaleAnimation = () => {
         scrollTrigger: {
           trigger: '.parent-container',
           pin: '.parent-container',
-          start: 'top 17%',
+          start: 'top 13%',
           end: `350% bottom`,
           pinSpacing: true,
           scrub: 1,
@@ -128,13 +128,13 @@ const ScaleAnimation = () => {
   return (
     <>
       {/* Animation Frame */}
-      <div className='lg:p-10 p-5 parent-container'>
+      <div className='lg:p-10 p-5 parent-container h-full'>
 
-        <div className='why-choose-us p-5 rounded-xl flex flex-row items-center justify-around px-10 animation-frame'>
+        <div className='why-choose-us p-5 rounded-xl flex flex-row items-center justify-around px-10 animation-frame h-[80vh]'>
           {/* Animate frame */}
-          <div className='border border-dashed border-[#FEBC13A6] rounded-full w-[500px] h-[500px] bg-transparent flex items-center justify-center animation-frame' >
-            <div className='border border-dashed border-[#FEBC13A6] rounded-full w-[400px] h-[400px] bg-transparent flex items-center justify-center '>
-              <div className='border border-dashed border-[#FEBC13A6] rounded-full w-[300px] h-[300px] bg-transparent flex items-center justify-center relative' >
+          <div className="border border-dashed border-circleBorder4 rounded-full lg:w-[500px] lg:h-[500px] bg-transparent flex items-center justify-center animation-frame" >
+            <div className='border border-dashed border-circleBorder3 rounded-full w-[400px] h-[400px] bg-transparent flex items-center justify-center '>
+              <div className='border border-dashed border-circleBorder2 rounded-full w-[300px] h-[300px] bg-transparent flex items-center justify-center relative' >
 
                 {React.Children.toArray(iconsArray.map((item, index) => (
                   <img
@@ -143,7 +143,7 @@ const ScaleAnimation = () => {
                     className={`w-[45px] h-[45px] ${item.position} ${activeIndex === index ? 'scale-[2.3] transition-all duration-700' : 'scale-1 transition-all duration-700'}`} />
                 )))}
 
-                <div className='border  border-dashed border-[#FEBC13A6] rounded-full w-[200px] h-[200px] bg-transparent flex items-center justify-center' >
+                <div className='border  border-dashed border-circleBorder4 rounded-full w-[200px] h-[200px] bg-transparent flex items-center justify-center' >
 
                 </div>
 

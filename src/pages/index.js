@@ -331,7 +331,7 @@ const index = () => {
         </div>
 
         {/* Why choose us */}
-        <div className="w-full bg-white lg:p-20 p-5 lg:hidden block">
+        <div className="w-full bg-white lg:p-20 p-5 md:hidden block">
           <div className="why-choose-us w-full flex lg:flex-row flex-col lg:justify-between justify-center items-center">
             <div className="w-[55%] p-5 lg:block hidden">
               <div className="w-full rounded-lg  h-full"></div>
@@ -377,7 +377,7 @@ const index = () => {
         </div>
 
         {/* Why choose us animation frame */}
-        <div className='lg:block hidden'>
+        <div className='md:block hidden'>
           <ScaleAnimation />
         </div>
 
