@@ -52,10 +52,10 @@ const ScaleAnimation = () => {
           trigger: '.parent-container',
           pin: '.parent-container',
           start: 'top 17%',
-          end: `250% bottom`,
+          end: `350% bottom`,
           pinSpacing: true,
           scrub: 1,
-          // snap: 1 / 3,
+          snap: 1 / 3,
           onUpdate: (self) => {
 
             if (self.progress > 0 && self.progress <= 0.25) {
@@ -94,7 +94,7 @@ const ScaleAnimation = () => {
 
       gsap.to('.card-fade-in-out', {
         opacity: 50,
-        duration: 200,
+        duration: 120,
         ease: 'power1.easeInOut'
       })
     }
