@@ -2,6 +2,7 @@ import gsap from 'gsap/dist/gsap'
 import { ScrollTrigger } from 'gsap/dist/ScrollTrigger'
 import { ScrollToPlugin } from 'gsap/dist/ScrollToPlugin'
 import React, { Fragment, useEffect, useState } from 'react'
+import { SectionTitle } from '@/pages'
 
 const cardStyles = {
   borderRadius: '12px',
@@ -129,7 +130,7 @@ const ScaleAnimation = () => {
       {/* Animation Frame */}
       <div className='lg:p-10 p-5 parent-container'>
 
-        <div className='bg-primaryBlue p-5 rounded-xl flex flex-row items-center justify-around px-10 animation-frame'>
+        <div className='why-choose-us p-5 rounded-xl flex flex-row items-center justify-around px-10 animation-frame'>
           {/* Animate frame */}
           <div className='border border-dashed border-[#FEBC13A6] rounded-full w-[500px] h-[500px] bg-transparent flex items-center justify-center animation-frame' >
             <div className='border border-dashed border-[#FEBC13A6] rounded-full w-[400px] h-[400px] bg-transparent flex items-center justify-center '>
@@ -153,7 +154,7 @@ const ScaleAnimation = () => {
           {/* Content */}
 
           <div className='lg:w-[450px] flex flex-col gap-2'>
-            <p className='text-base text-white uppercase tracking-wide'>Why Choose us</p>
+            <SectionTitle title="Why Choose us" style="text-[#4EE287]" />
             <p className='lg:text-xl text-lg font-medium tracking-wide text-white'>Delivering Excellence in <br /> Pharmaceutical Manufacturing</p>
             <p className='text-base font-thin text-white'>Trust us for pharma excellence: quality, expertise, customer-centricity.</p>
 
