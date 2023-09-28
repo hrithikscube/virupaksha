@@ -132,9 +132,9 @@ const ScaleAnimation = () => {
 
         <div className='why-choose-us p-5 rounded-xl flex flex-row items-center justify-around px-10 animation-frame h-[80vh]'>
           {/* Animate frame */}
-          <div className="border border-dashed border-circleBorder4 rounded-full lg:w-[500px] lg:h-[500px] bg-transparent flex items-center justify-center animation-frame" >
-            <div className='border border-dashed border-circleBorder3 rounded-full w-[400px] h-[400px] bg-transparent flex items-center justify-center '>
-              <div className='border border-dashed border-circleBorder2 rounded-full w-[300px] h-[300px] bg-transparent flex items-center justify-center relative' >
+          <div className="border circle-spacing border-dashed border-circleBorder4 rounded-full lg:w-[500px] lg:h-[500px] bg-transparent flex items-center justify-center animation-frame" >
+            <div className='border circle-spacing border-dashed border-circleBorder3 rounded-full w-[400px] h-[400px] bg-transparent flex items-center justify-center '>
+              <div className='border circle-spacing border-dashed border-circleBorder2 rounded-full w-[300px] h-[300px] bg-transparent flex items-center justify-center relative' >
 
                 {React.Children.toArray(iconsArray.map((item, index) => (
                   <img
@@ -143,7 +143,7 @@ const ScaleAnimation = () => {
                     className={`w-[45px] h-[45px] ${item.position} ${activeIndex === index ? 'scale-[2.3] transition-all duration-700' : 'scale-1 transition-all duration-700'}`} />
                 )))}
 
-                <div className='border  border-dashed border-circleBorder4 rounded-full w-[200px] h-[200px] bg-transparent flex items-center justify-center' >
+                <div className='border circle-spacing  border-dashed border-circleBorder4 rounded-full w-[200px] h-[200px] bg-transparent flex items-center justify-center' >
 
                 </div>
 
@@ -183,7 +183,7 @@ const ScaleAnimation = () => {
                     {
                       activeIndex === index && (
                         <div style={cardStyles} className='p-5 rounded-xl w-full h-[200px] flex flex-col items-start justify-center card-fade-in-out'>
-                          <h2 className="text-lg font-medium text-white">{cardInfo[activeIndex].title}</h2>
+                          <h2 className="text-lg font-semibold text-white">{cardInfo[activeIndex].title}</h2>
                           <p className='text-white text-base font-thin'>{cardInfo[activeIndex].description}</p>
                         </div>
                       )

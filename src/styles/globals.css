@@ -75,8 +75,12 @@
   background: #C4C4C4;
 }
 
-.outlined-card{
+.outlined-card {
   border-radius: 12px;
-border: 1px solid #232E69;
-background: rgba(141, 150, 233, 0.21);
+  border: 1px solid #232E69;
+  background: rgba(141, 150, 233, 0.21);
+}
+
+.circle-spacing {
+  border-width: 1.7px;
 }

@@ -215,7 +215,7 @@ const index = () => {
           />
 
           <div className="absolute top-1/3 lg:left-20 z-10 mx-5">
-            <p className="lg:text-2xl text-lg font-semibold lg:w-[900px] leading-7 text-primaryBlue">
+            <p className="lg:text-2xl md:text-2xl text-lg font-semibold lg:w-[900px] leading-7 text-primaryBlue">
               {' '}
               We, at <span className="text-vomitGreen">Virupaksha</span> strive
               constantly to supply the highest quality products to our customers
@@ -235,7 +235,7 @@ const index = () => {
                   <p className="text-vomitGreen uppercase text-sm font-medium">
                     Active Pharmaceutical Ingredients
                   </p>
-                  <p className="text-base font-thin text-white">
+                  <p className="lg:text-base text-sm font-thin text-white">
                     Active substances that provide <br /> pharmacological
                     activity in <br /> medications.
                   </p>
@@ -256,7 +256,7 @@ const index = () => {
                   <p className="text-vomitGreen uppercase text-sm font-medium">
                     Intermediates
                   </p>
-                  <p className="text-base font-thin text-white">
+                  <p className="lg:text-base text-sm font-thin text-white">
                     Pharmaceutical intermediates play <br /> a crucial role in
                     the production of <br /> life-saving medications.
                   </p>
@@ -274,7 +274,7 @@ const index = () => {
                 Sustainability & Quality Products
               </p>
               <div className="">
-                <p className="text-base font-thin text-primaryBlue ">
+                <p className="lg:text-base text-sm  font-thin text-primaryBlue ">
                   We make high-quality APIs and intermediates, which are the
                   backbone of the pharmaceutical industry.
                 </p>
