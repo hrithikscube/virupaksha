@@ -120,13 +120,13 @@ const AboutUs = () => {
 
       {/* Our Expertise */}
       <div className="lg:p-10 lg:px-20 p-5">
-        <div className="why-choose-us w-full lg:h-[450px] flex flex-col text-center gap-3 items-center lg:p-0 p-5 justify-center">
+        <div className="why-choose-us  lg:h-[450px] flex flex-col text-center gap-3 items-center lg:p-0 p-5 justify-center">
           <SectionTitle title="Our Expertise" style="text-[#4EE287]" />
           <p className="lg:text-2xl text-lg font-semibold text-white">
             Unleashing the <br /> Power of Expertise
           </p>
 
-          <div className="grid lg:grid-cols-4 gap-4 w-full">
+          <div className="grid lg:grid-cols-4 gap-4">
             {React.Children.toArray(
               cards.map((item) => (
                 <div className="choose-card rounded-lg p-5 flex h-[170px] flex-col items-center justify-center gap-3">
