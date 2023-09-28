@@ -26,7 +26,7 @@ const Header = () => {
   ]
 
   const [showMenu, setShowMenu] = useState(false)
-  console.log('showMenu', showMenu)
+  
   return (
     <div className="w-full lg:p-6 p-5 fixed z-40">
       <div className="flex items-center justify-between lg:p-5 p-4 m-auto header-background lg:px-7">

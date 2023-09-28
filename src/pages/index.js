@@ -5,6 +5,7 @@ import React, { Fragment, useState } from 'react'
 import TextArea from '@/components/input/TextArea'
 import TextInput from '@/components/input/TextInput'
 import Footer from '@/components/Footer'
+import ScaleAnimation from '@/components/animations/ScaleAnimation'
 
 export const SectionTitle = ({ title, style }) => {
   return (
@@ -282,9 +283,15 @@ const index = () => {
                 )}
               </div>
 
-              <div className="relative lg:left-[100px]">
+              <div className="relative lg:left-[100px] lg:block hidden">
                 <Cta variant="outlined">Know More</Cta>
               </div>
+
+              <div className="lg:hidden flex items-center justify-center">
+                <Cta variant="outlined">Know More</Cta>
+              </div>
+
+
             </div>
 
             <div className="who-we-are"></div>
@@ -292,7 +299,7 @@ const index = () => {
         </div>
 
         {/* Why choose us */}
-        <div className="w-full bg-white lg:p-20 p-5">
+        <div className="w-full bg-white lg:p-20 p-5 lg:hidden block">
           <div className="why-choose-us w-full flex lg:flex-row flex-col lg:justify-between justify-center items-center">
             <div className="w-[55%] p-5 lg:block hidden">
               <div className="w-full rounded-lg  h-full"></div>
@@ -335,6 +342,11 @@ const index = () => {
               </div>
             </div>
           </div>
+        </div>
+
+        {/* Why choose us animation frame */}
+        <div className='lg:block hidden'>
+          <ScaleAnimation />
         </div>
 
         {/* Unit Details */}
