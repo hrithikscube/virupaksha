@@ -1,3 +1,4 @@
+import Link from 'next/link'
 import React, { Fragment } from 'react'
 
 const footerLinks = [
@@ -27,11 +28,11 @@ const footerLinks = [
     subItems: [
       {
         name: 'API',
-        link: '#',
+        link: '/products/apis',
       },
       {
         name: 'Intermediates',
-        link: '#',
+        link: '/products/intermediates',
       },
     ],
   },
@@ -101,11 +102,11 @@ const Footer = () => {
                   <h1 className="text-base font-semibold">{item.name}</h1>
                   {React.Children.toArray(
                     item.subItems.map((x) => (
-                      <div>
+                      <Link href={x.link}>
                         <p className="text-sm text-white hover:underline cursor-pointer">
                           {x.name}
                         </p>
-                      </div>
+                      </Link>
                     )),
                   )}
                 </div>
@@ -127,7 +128,7 @@ const Footer = () => {
 
             <div className="flex items-center gap-4">
               {React.Children.toArray(
-                socials.map(({icon,link}) => (
+                socials.map(({ icon, link }) => (
                   <div>
                     <a href={link}>
                       <img
