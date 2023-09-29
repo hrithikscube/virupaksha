@@ -58,7 +58,7 @@ const Api = () => {
 
           {React.Children.toArray(
             [11, 2, 1, 1, 2, 1].map((item) => (
-              <div className="grid grid-cols-2 lg:gap-10 py-2 border-b-2 border-[#f7f7f7] px-5">
+              <div className="grid grid-cols-2 lg:gap-10 py-2 px-5 mt-3">
                 <div className=''>
                   <p className="text-base font-medium text-primaryBlue">
                     {detailsList[0].name}
