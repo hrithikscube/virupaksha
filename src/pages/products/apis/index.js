@@ -1,3 +1,4 @@
+import ContactCard from '@/components/ContactCard'
 import Cta from '@/components/Cta'
 import Footer from '@/components/Footer'
 import Header from '@/components/Header'
@@ -17,11 +18,11 @@ const Api = () => {
       <Header />
 
       <div className="relative">
-        <div className="about-us-overlay">
+        <div className="">
           <img
             src="/images/api.webp"
             alt="about-us-image"
-            className="w-full h-[527px] object-fit"
+            className="w-full h-[527px] object-cover lg:object-fit"
           />
         </div>
 
@@ -40,7 +41,6 @@ const Api = () => {
       </div>
 
       <div className="w-full lg:px-10 px-5 -mt-40 lg:-mt-20">
-
         <div className="why-choose-us p-5 mt-5">
           <div className="flex flex-row items-center justify-center lg:justify-between gap-4">
             {React.Children.toArray(
@@ -92,6 +92,9 @@ const Api = () => {
           )}
         </div>
       </div>
+
+      {/* Contact Card */}
+      <ContactCard />
 
       <Footer />
     </Fragment>
