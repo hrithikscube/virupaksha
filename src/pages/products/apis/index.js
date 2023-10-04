@@ -2,7 +2,8 @@ import ContactCard from '@/components/ContactCard'
 import Cta from '@/components/Cta'
 import Footer from '@/components/Footer'
 import Header from '@/components/Header'
-import React, { Fragment } from 'react'
+import Searchbar from '@/components/Searchbar'
+import React, { Fragment, useState } from 'react'
 
 const Api = () => {
   const detailsList = [
@@ -12,6 +13,9 @@ const Api = () => {
       cas_no: '83799-24-0',
     },
   ]
+  
+  const [searchKey, setSearchKey] = useState('')
+
 
   return (
     <Fragment>
@@ -40,8 +44,14 @@ const Api = () => {
         </div>
       </div>
 
-      <div className="w-full lg:px-10 px-5 -mt-40 lg:-mt-20">
+      <div className='-mt-[120px] lg:px-0 px-5'>
+        <Searchbar name="search_key" value={searchKey} handleChange={(e) => setSearchKey(e.target.value)} onSubmit={() => alert(searchKey)} />
+      </div>
+
+      <div className="w-full lg:px-10 px-5">
+
         <div className="why-choose-us p-5 mt-5">
+
           <div className="flex flex-row items-center justify-center lg:justify-between gap-4">
             {React.Children.toArray(
               [
@@ -60,6 +70,7 @@ const Api = () => {
             <p className="text-base font-thin text-white lg:hidden block">
               Product Name
             </p>
+            
           </div>
         </div>
 

@@ -2,7 +2,7 @@ import React, { Fragment } from 'react'
 
 const Cta = (props) => {
   return (
-    <Fragment>
+    <div className={`${props.style}`}>
       {props.variant === 'outlined' ? (
         <button
           onClick={props.onClick}
@@ -25,7 +25,7 @@ const Cta = (props) => {
           {props.children}
         </button>
       )}
-    </Fragment>
+    </div>
   )
 }
 

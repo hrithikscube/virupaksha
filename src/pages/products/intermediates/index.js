@@ -2,11 +2,12 @@ import ContactCard from '@/components/ContactCard'
 import Cta from '@/components/Cta'
 import Footer from '@/components/Footer'
 import Header from '@/components/Header'
-import React, { Fragment } from 'react'
+import Searchbar from '@/components/Searchbar'
+import React, { Fragment, useState } from 'react'
 
 const Tab = () => {
   return (
-    <div className="why-choose-us p-5 w-full grid grid-cols-2">
+    <div className="why-choose-us p-5 lg:w-full w-[620px] overflow-x-auto grid grid-cols-2">
       <p className="text-base font-medium text-white">Product Information</p>
       <p className="lg:text-lg text-base font-medium text-white">CAS No.</p>
     </div>
@@ -21,6 +22,9 @@ const detailsList = [
 ]
 
 const Api = () => {
+
+  const [searchKey, setSearchKey] = useState('')
+
   return (
     <Fragment>
       <Header />
@@ -48,17 +52,21 @@ const Api = () => {
         </div>
       </div>
 
+      <div className='-mt-[120px] lg:px-0 px-5'>
+        <Searchbar name="search_key" value={searchKey} handleChange={(e) => setSearchKey(e.target.value)} onSubmit={() => alert(searchKey)} />
+      </div>
+
       <div className="lg:px-10 px-5 ">
         <p className="lg:text-lg text-base font-semibold text-primaryBlue text-center my-5">
           Anti Depressant/ Anti Psychotic
         </p>
 
-        <div className="border-2 border-[#F7F7F7] rounded-[20px] p-5 flex flex-col">
+        <div className="border-2 border-[#F7F7F7] rounded-[20px] p-5 flex flex-col overflow-x-auto">
           <Tab />
 
           {React.Children.toArray(
             [11, 2, 1, 1, 2, 1].map((item) => (
-              <div className="grid grid-cols-2 lg:gap-10 py-2 px-5 mt-3">
+              <div className="grid grid-cols-2 lg:gap-10 gap-5 py-2 px-5 mt-3 lg:w-full w-[620px] overflow-x-auto">
                 <div className=''>
                   <p className="text-base font-medium text-primaryBlue">
                     {detailsList[0].name}
