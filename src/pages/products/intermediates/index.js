@@ -7,12 +7,14 @@ import React, { Fragment, useState } from 'react'
 
 const Tab = () => {
   return (
-    <div className="why-choose-us p-5 lg:w-full w-[620px] overflow-x-auto grid grid-cols-2">
+    <div className="why-choose-us p-5 lg:w-full w-[680px] overflow-x-auto grid grid-cols-2">
       <p className="text-base font-medium text-white">Product Information</p>
       <p className="lg:text-lg text-base font-medium text-white">CAS No.</p>
     </div>
   )
 }
+
+
 
 const detailsList = [
   {
@@ -56,9 +58,11 @@ const Api = () => {
         <Searchbar name="search_key" value={searchKey} handleChange={(e) => setSearchKey(e.target.value)} onSubmit={() => alert(searchKey)} />
       </div>
 
+
+
       <div className="lg:px-10 px-5 ">
         <p className="lg:text-lg text-base font-semibold text-primaryBlue text-center my-5">
-          Anti Depressant/ Anti Psychotic
+          Anti Depressant
         </p>
 
         <div className="border-2 border-[#F7F7F7] rounded-[20px] p-5 flex flex-col overflow-x-auto">
@@ -66,15 +70,15 @@ const Api = () => {
 
           {React.Children.toArray(
             [11, 2, 1, 1, 2, 1].map((item) => (
-              <div className="grid grid-cols-2 lg:gap-10 gap-5 py-2 px-5 mt-3 lg:w-full w-[620px] overflow-x-auto">
+              <div className="grid grid-cols-2 py-2 lg:px-5 mt-3 lg:w-full w-[680px] overflow-x-auto">
                 <div className=''>
-                  <p className="text-base font-medium text-primaryBlue">
+                  <p className="text-sm lg:text-base font-medium text-primaryBlue">
                     {detailsList[0].name}
                   </p>
                 </div>
 
-                <div className="flex items-center justify-center gap-4">
-                  <h1 className="text-base font-medium text-primaryBlue">
+                <div className="flex items-center justify-start gap-4">
+                  <h1 className="text-sm lg:text-base font-medium text-primaryBlue">
                     {detailsList[0].cas_no}
                   </h1>
                   <button className="border border-primaryBlue text-xs lg:text-sm font-medium text-primaryBlue w-[110px] lg:w-[145px] rounded-lg h-[42px] lg:h-[47px]">
@@ -90,6 +94,7 @@ const Api = () => {
           )}
         </div>
       </div>
+
 
       {/* Contact Card */}
       <ContactCard />
