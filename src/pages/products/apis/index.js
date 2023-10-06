@@ -5,6 +5,33 @@ import Header from '@/components/Header'
 import Searchbar from '@/components/Searchbar'
 import React, { Fragment, useState } from 'react'
 
+
+const Columns = () => {
+  return (
+    <div className="why-choose-us p-5 mt-5">
+      <div className="grid lg:grid-cols-4">
+        {React.Children.toArray(
+          [
+            'Sl.No',
+            'Product Name',
+            'Status',
+            'CAS No.',
+          ].map((item, index) => (
+            <p className="text-base lg:block hidden font-thin text-white text-start">
+              {item}
+            </p>
+          )),
+        )}
+
+        <p className="text-base font-thin text-white lg:hidden block">
+          Product Name
+        </p>
+
+      </div>
+    </div>
+  )
+}
+
 const Api = () => {
   const detailsList = [
     {
@@ -13,7 +40,7 @@ const Api = () => {
       cas_no: '83799-24-0',
     },
   ]
-  
+
   const [searchKey, setSearchKey] = useState('')
 
 
@@ -50,35 +77,12 @@ const Api = () => {
 
       <div className="w-full lg:px-10 px-5">
 
-        <div className="why-choose-us p-5 mt-5">
-
-          <div className="flex flex-row items-center justify-center lg:justify-between gap-4">
-            {React.Children.toArray(
-              [
-                'Sl.No',
-                'Product Name',
-                'Status',
-                'CAS No.',
-                'Action',
-              ].map((item, index) => (
-                <p className="text-base lg:block hidden font-thin text-white">
-                  {item}
-                </p>
-              )),
-            )}
-
-            <p className="text-base font-thin text-white lg:hidden block">
-              Product Name
-            </p>
-            
-          </div>
-        </div>
-
+        <Columns />
         <div className="flex flex-col gap-3 mt-5">
           {React.Children.toArray(
             [1, 2, 2, 2, 2, 3, 3, 3, 5, 6, 2, 2, 3, 4, 2, 1, 2, 2, 1, 2].map(
               (item, index) => (
-                <div className="flex lg:flex-row items-center justify-between text-center gap-4 text-primaryBlue text-base font-semibold border-b-2 border-[#DDE8F3] py-2">
+                <div className="lg:grid lg:grid-cols-4 flex flex-row lg:px-2 text-primaryBlue text-base font-semibold border-b-2 border-[#DDE8F3] py-2">
                   <p className="text-sm lg:block hidden">{index + 1}.</p>
                   <p className="text-sm ">{detailsList[0].name}</p>
                   <p className="text-sm lg:block hidden">
